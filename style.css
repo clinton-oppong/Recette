@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono:wght@700&display=swap");
+<<<<<<< HEAD
 /*import font from css file*/
 @import url(./fonts.css);
+=======
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
 * {
   padding: 0;
   margin: 0;
@@ -9,8 +12,13 @@
 
 html {
   font-size: 10.5px;
+<<<<<<< HEAD
   font-family: "Quattrocento", cursive;
   font-family: "Quattrocento;", monospace;
+=======
+  font-family: "Lobster", cursive;
+  font-family: "Roboto Mono", monospace;
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
 }
 a {
   text-decoration: none;
@@ -30,7 +38,11 @@ img {
 
 /* Hero Section */
 #hero {
+<<<<<<< HEAD
   background-image: url(images/recette\ background.jpg);
+=======
+  background-image: url(.//images/unknown.gif);
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
   background-size: cover;
   background-position: top center;
   position: relative;
@@ -152,7 +164,11 @@ img {
   flex-direction: column;
   padding: 40px;
   border-radius: 10px;
+<<<<<<< HEAD
   background-image: url(https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+=======
+  background-image: url("not yet ");
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
   background-position: center;
   background-size: cover;
   margin: 20px 5%;
@@ -167,7 +183,11 @@ img {
   flex-direction: column;
   padding: 40px;
   border-radius: 10px;
+<<<<<<< HEAD
   background-image: url(https://images.unsplash.com/photo-1481931098730-318b6f776db0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+=======
+  background-image: url("not yet ");
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
   background-position: center;
   background-size: cover;
   margin: 20px 5%;
@@ -182,7 +202,11 @@ img {
   flex-direction: column;
   padding: 40px;
   border-radius: 10px;
+<<<<<<< HEAD
   background-image: url(https://images.unsplash.com/photo-1511690656952-34342bb7c2f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+=======
+  background-image: url("not yet ");
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
   background-position: center;
   background-size: cover;
   margin: 20px 5%;
@@ -197,7 +221,11 @@ img {
   flex-direction: column;
   padding: 40px;
   border-radius: 10px;
+<<<<<<< HEAD
   background-image: url(https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);
+=======
+  background-image: url("not yet ");
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
   background-position: center;
   background-size: cover;
   margin: 20px 5%;
@@ -338,6 +366,7 @@ img {
   }
 }
 /* End Keyframes */
+<<<<<<< HEAD
 .navbar-brand {
   margin: 0 auto;
   border-radius: 4px 42px 42px 40px;
@@ -388,3 +417,5 @@ img {
   }
 }
 /* Ends navbar and navbar-brand colors*/
+=======
+>>>>>>> 97f7cdd87e4340fb8ad7d92a07e1bee11ec1e8db
