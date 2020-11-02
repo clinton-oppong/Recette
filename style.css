@@ -28,6 +28,29 @@ img {
   object-fit: cover;
 }
 
+/* Search-Box Section */
+
+.form-box {
+  position: -webkit-sticky;
+  bottom: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-field{
+  border-radius: 25px;
+  padding: 10px;
+  height: 30x;
+  border: none;
+  outline: none;
+}
+.recipe{
+  width: 400px;
+}
+.location{
+  width: 200px;
+}
+
 /* Hero Section */
 #hero {
   background-image: url(images/recette\ background.jpg);
@@ -110,7 +133,25 @@ img {
 /* End Hero Section */
 
 /* Service Section */
-#services {
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "image-1 image-2 image-3 image-4";
+  grid-gap: 10px;
+}
+.services-container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+  color: red;
+}
+
+.services-container > div > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #services .services {
   flex-direction: column;
@@ -338,6 +379,7 @@ img {
   }
 }
 /* End Keyframes */
+      
 .navbar-brand {
   margin: 0 auto;
   border-radius: 4px 42px 42px 40px;
