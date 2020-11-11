@@ -215,7 +215,7 @@ img {
 }
 .item__content:after {
   color: #1c0004;
-  content: "not yet";
+  content: ;
 }
 .item__content--small {
   color: #ce4257;
@@ -225,7 +225,7 @@ img {
   background: #d66274;
 }
 .item__content--small:after {
-  content: "not yet";
+  content: ;
 }
 /*do not touch not finished yet*/
 
