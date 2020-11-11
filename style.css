@@ -131,6 +131,7 @@ img {
   background-color: red;
 }
 /* End Hero Section */
+
 /* grid page */
 .foods {
   -webkit-column-count: 1;
@@ -224,26 +225,6 @@ img {
   background: #d66274;
 }
 .item__content--small:after {
-  content: "not yet";
-}
-.item__content--medium {
-  color: #ffc093;
-  height: 175px;
-}
-.item__content--medium:hover {
-  background: #ffd8bc;
-}
-.item__content--medium:after {
-  content: "not yet";
-}
-.item__content--large {
-  color: #ff7f51;
-  height: 280px;
-}
-.item__content--large:hover {
-  background: #ff9d7a;
-}
-.item__content--large:after {
   content: "not yet";
 }
 /*do not touch not finished yet*/
