@@ -1,83 +1,83 @@
 const recipe = [
     {
       id: 1,
-      title: "indian",
+      title: "Indian",
       category: "breakfast",
       recipe: "link",
       img: "lol not yet",
-      desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed `,
+      desc: "",
     },
     {
       id: 2,
-      title: "thai",
+      title: "Thai",
       category: "lunch",
       recipe: "link",
       img: "lol not yet",
-      desc: `vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats `,
+      desc: "",
     },
     {
       id: 3,
-      title: "chinese",
+      title: "Chinese",
       category: "dessert",
       recipe: "link",
       img: "lol not yet",
-      desc: `ombucha chillwave fanny pack 3 wolf moon street art photo booth before they sold out organic viral.`,
+      desc: "",
     },
     {
       id: 4,
-      title: "greek",
-      category: "breakfast",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut, `,
-    },
-    {
-      id: 5,
-      title: "italian",
-      category: "lunch",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up `,
-    },
-    {
-      id: 6,
-      title: "japanese",
-      category: "vergetarian",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday`,
-    },
-    {
-      id: 7,
-      title: "korean",
-      category: "breakfast",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `carry jianbing normcore freegan. Viral single-origin coffee live-edge, pork belly cloud bread iceland put a bird `,
-    },
-    {
-      id: 8,
-      title: "mexican",
-      category: "lunch",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `on it tumblr kickstarter thundercats migas everyday carry squid palo santo leggings. Food truck truffaut  `,
-    },
-    {
-      id: 9,
-      title: "french",
-      category: "gluten-free",
-      recipe: "link",
-      img: "lol not yet",
-      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
-    },
-    {
-      id: 10,
-      title: "vietnamese",
+      title: "Greek",
       category: "dinner",
       recipe: "link",
       img: "lol not yet",
-      desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
+      desc: "",
+    },
+    {
+      id: 5,
+      title: "Italian",
+      category: "lunch",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
+    },
+    {
+      id: 6,
+      title: "Japanese",
+      category: "vegetarian",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
+    },
+    {
+      id: 7,
+      title: "Korean",
+      category: "breakfast",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
+    },
+    {
+      id: 8,
+      title: "Mexican",
+      category: "lunch",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
+    },
+    {
+      id: 9,
+      title: "French",
+      category: "gluten-free",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
+    },
+    {
+      id: 10,
+      title: "Vietnamese",
+      category: "dinner",
+      recipe: "link",
+      img: "lol not yet",
+      desc: "",
     },
   ];
   // get parent element
@@ -88,11 +88,11 @@ const recipe = [
     diplayMenuItems(recipe);
     displayMenuButtons();
   });
-  
+
   function diplayMenuItems(menuItems) {
     let displayMenu = menuItems.map(function (item) {
       // console.log(item);
-  
+
       return `<article class="recipe-item">
             <img src=${item.img} alt=${item.title} class="photo" />
             <div class="item-info">
@@ -108,7 +108,7 @@ const recipe = [
     });
     displayMenu = displayMenu.join("");
     // console.log(displayMenu);
-  
+
     sectionCenter.innerHTML = displayMenu;
   }
   function displayMenuButtons() {
@@ -128,11 +128,11 @@ const recipe = [
           </button>`;
       })
       .join("");
-  
+
     btnContainer.innerHTML = categoryBtns;
     const filterBtns = btnContainer.querySelectorAll(".filter-btn");
     console.log(filterBtns);
-  
+
     filterBtns.forEach(function (btn) {
       btn.addEventListener("click", function (e) {
         // console.log(e.currentTarget.dataset);
@@ -151,4 +151,3 @@ const recipe = [
       });
     });
   }
-  
