@@ -124,10 +124,14 @@ img {
   margin-bottom: 10px;
   text-transform: uppercase;
   text-align: center;
+<<<<<<< Updated upstream
   letter-spacing: 0.2rem;
 }
 #services .section-title span {
   color: black;
+=======
+  margin-bottom: 2rdobem;
+>>>>>>> Stashed changes
 }
 #services .service-top p {
   font-size: 1.4rem;
