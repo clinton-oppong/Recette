@@ -75,7 +75,7 @@ const recipe = [
       id: 10,
       title: "Vietnamese",
       category: "dinner",
-      recipe: "link",
+      recipe: "Link",
       img: "lol not yet",
       desc: "",
     },
