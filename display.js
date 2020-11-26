@@ -75,7 +75,7 @@ const recipe = [
       id: 10,
       title: "vietnamese",
       category: "dinner",
-      recipe: "link",
+      recipe: "Link",
       img: "lol not yet",
       desc: `skateboard fam synth authentic semiotics. Live-edge lyft af, edison bulb yuccie crucifix microdosing.`,
     },
