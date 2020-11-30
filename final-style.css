@@ -1,0 +1,224 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font-size: 10.5px;
+    font-family: "Quattrocento", cursive;
+    font-family: "Quattrocento;", monospace;
+  }
+  a {
+    text-decoration: none;
+  }
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Hero Section */
+  #hero {
+    background-image: url(images/recette\ background.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: -1;
+  }
+  #hero .hero {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+  }
+  #hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal 1.5s ease forwards;
+    animation-delay: 1.5s;
+  }
+  #hero h1:nth-child(1) {
+    animation-delay: 2.2s;
+  }
+  #hero h1:nth-child(2) {
+    animation-delay: 3.5s;
+  }
+  #hero h1:nth-child(3) {
+    animation: text_name 2.5s ease forwards;
+    animation-delay: 4.5s;
+  }
+  #hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: red;
+    animation: text_reveal_box 1.5s ease;
+    animation-delay: 3.5s;
+  }
+  #hero h1:nth-child(1) span {
+    animation-delay: 2.5s;
+  }
+  #hero h1:nth-child(2) span {
+    animation-delay: 3.5s;
+  }
+  #hero h1:nth-child(3) span {
+    animation-delay: 4.5s;
+  }
+  #hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: red;
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-top: 30px;
+    transition: 0.3s ease background-color;
+    transition-property: background-color, color;
+  }
+  #hero .cta:hover {
+    color: whitesmoke;
+    background-color: red;
+  }
+
+  /* Keyframes */
+@keyframes text_reveal_box {
+    50% {
+      width: 100%;
+      left: 0%;
+    }
+    100% {
+      width: 0;
+      left: 100%;
+    }
+  }
+  @keyframes text_reveal {
+    100% {
+      color: whitesmoke;
+    }
+  }
+  @keyframes text_name {
+    100% {
+      color: red;
+      font-weight: 500px;
+    }
+  }
+  /* End Keyframes */
+        
+  /* End Hero Section */
+
+
+.navbar-brand {
+    position: relative;
+    background: url();
+    width: 60px;
+    left: 15px;
+    background-size: contain;
+ }
+    
+.bg-light {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      63deg,
+      rgb(216, 12, 12) 5%,
+      rgb(219, 79, 79) 61%,
+      rgba(17, 218, 207, 0.975) 83%
+    );
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  /* Ends navbar and navbar-brand colors*/
+
+
+#RecipeList {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+  }
+  
+  .character {
+    list-style-type: none;
+    background-color: #eaeaea;
+    border-radius: 3px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+        'name image'
+        'house image';
+    text-align: left;
+  }
+  
+  .character > h2 {
+    grid-area: name;
+    margin-bottom: 0px;
+  }
+  
+  .character > p {
+    grid-area: house;
+    margin: 0;
+    margin-top: -18px;
+  }
+  
+  .character > img {
+    max-height: 100px;
+    grid-area: image;
+  }
+  
+  #searchBar {
+    width: 100%;
+    height: 32px;
+    border-radius: 3px;
+    border: 1px solid #eaeaea;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+  
+  #searchWrapper {
+    position: relative;
+  }
+  
+  #searchWrapper::after {
+    content: '🔍';
+    position: absolute;
+    top: 7px;
+    right: 15px;
+  }
+  
