@@ -1,6 +1,42 @@
 <!DOCTYPE html>
     <html lang="en">
     <head>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+        <script>
+
+          // function getsource(id, index){
+          // $.ajax({
+          // url:"https://api.spoonacular.com/recipes/"+id+"/information?apiKey=c17017544f3a41eda0e799a82860b763",
+          // success: function(res) {
+          // console.log("sourceLink" + index)
+          // document.getElementById("sourceLink" + index).innerHTML=res.sourceUrl
+          // document.getElementById("sourceLink" + index).href=res.sourceUrl
+          // }
+          // });
+          // }
+          function getrecepe(q){
+          $.ajax({
+          url:"https://api.spoonacular.com/recipes/search?apiKey=c17017544f3a41eda0e799a82860b763&number=8&query="+q,
+          success: function(res) {
+            var i;
+            str = ""
+          for (i=0; i<8; i++)
+            {
+              console.log(res.results[i].title)
+              //getsource(res.results[i].id, i)
+              str += "<div style = 'border-radius: 10px; background-color: #911414; float: left; margin: 10px; padding: 20px'><h1 style = 'color: white'>"+res.results[i].title.substring(0, 25)+"</h1><br><img src='"
+              +res.baseUri+res.results[i].image+"' style = 'width: 400px; height: 400px' /></br><h4 style = 'color: white'>Ready in "
+              +res.results[i].readyInMinutes+" minutes!</h4><h4 style = 'color: white'>Serving size is "
+              +res.results[i].servings+" servings.</h4><a style = 'font-size: 1.5em; color: #47fff9' href='"
+              +res.results[i].sourceUrl+"'>VISIT WEBSITE</a></div>"
+            }
+            str += "<div style = 'clear: both'></div>"
+            document.getElementById("output").innerHTML=str
+          }
+          });
+          }
+
+        </script>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,10 +51,11 @@
         </head>
         <body>
             <!------ =================Start Header Area====================== ------->
+
             <header class="hearder_area">
                 <div class="main-recipe">
                     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                        <a class="navbar-brand" href="#"><img src="images/Button Images/recette_logo.png" alt="logo"></a>
+                        <div style = "border-radius: 18px; background-color: white"><a class="navbar-brand" href="#"><img src="images/Button Images/recette_logo.png" alt="logo"></a></div>
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                           <span class="navbar-toggler-icon"></span>
                         </button>
@@ -60,179 +97,125 @@
                             type="text"
                             name="searchBar"
                             id="searchBar"
-                            placeholder="search for Recipes"/>
+                            placeholder="What are you craving?"/>
                     </div>
-                    
-                    <a href="#" type="button" class="cta">Search</a>
+
+                    <a href="#output" type="button" onclick="getrecepe(document.getElementById('searchBar').value)" class="cta">Search</a>
                 </div>
         </section>
                 <!---End Hero Section --->
-        
+                  <div id="output"></div>
             <!-- recipe items -->
-      
+
         <section class="recipes" id="recipes">
-          <ul>
+          <ul style = "list-style-type: none">
             <li>
-              <figure>
-                <img src="images/Button Images/breakfast.jpg" alt="breakfast">
-                <figcaption><h3>Breakfast</h3></figcaption>
-              </figure>
-              <p>
-               it breakfast what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('breakfast')"><figure>
+                <img id = "iwannadie" src="images/Button Images/breakfast.jpg" alt="breakfast">
+                <figcaption><h3 style = "color: #ba2543">Breakfast</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/lunch.jpg" alt="Lunch">
-                <figcaption><h3>Lunch</h3></figcaption>
-              </figure>
-              <p>
-                it lunch what more do you want?             
-               </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('lunch')"><figure>
+                <img id = "iwannadie" src="images/Button Images/lunch.jpg" alt="Lunch">
+                <figcaption><h3 style = "color: #ba2543">Lunch</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/dinner.jpg" alt="Dinner">
-                <figcaption><h3>Dinner</h3></figcaption>
-              </figure>
-              <p>
-                it dinner what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('dinner')"><figure>
+                <img id = "iwannadie" src="images/Button Images/dinner.jpg" alt="Dinner">
+                <figcaption><h3 style = "color: #ba2543">Dinner</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/dessert.jpg" alt="Dessert">
-                <figcaption><h3>Dessert</h3></figcaption>
-              </figure>
-              <p>
-               it dessert what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('dessert')"><figure>
+                <img id = "iwannadie" src="images/Button Images/dessert.jpg" alt="Dessert">
+                <figcaption><h3 style = "color: #ba2543">Dessert</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/vegetarian.jpg" alt="Vegetarian">
-                <figcaption><h3>Vegetarian</h3></figcaption>
-              </figure>
-              <p>
-               it vegetarian what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('vegetarian')"><figure>
+                <img id = "iwannadie" src="images/Button Images/vegetarian.jpg" alt="Vegetarian">
+                <figcaption><h3 style = "color: #ba2543">Vegetarian</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/glutenfree.jpg" alt="Gluten">
-                <figcaption><h3>Gluten</h3></figcaption>
-              </figure>
-              <p>
-               it glutenfree. what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('glutenfree')"><figure>
+                <img id = "iwannadie" src="images/Button Images/glutenfree.jpg" alt="Gluten-Free">
+                <figcaption><h3 style = "color: #ba2543">Gluten-Free</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/chinese.jpg" alt="Chinese">
-                <figcaption><h3>Chinese</h3></figcaption>
-              </figure>
-              <p>
-               it chinese what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('chinese')"><figure>
+                <img id = "iwannadie" src="images/Button Images/chinese.jpg" alt="Chinese">
+                <figcaption><h3 style = "color: #ba2543">Chinese</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/french.jpg" alt="French">
-                <figcaption><h3>French</h3></figcaption>
-              </figure>
-              <p>
-               it french what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('french')"><figure>
+                <img id = "iwannadie" src="images/Button Images/french.jpg" alt="French">
+                <figcaption><h3 style = "color: #ba2543">French</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/greek.jpg" alt="Greek">
-                <figcaption><h3>Greek</h3></figcaption>
-              </figure>
-              <p>
-               it greek what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('greek')"><figure>
+                <img id = "iwannadie" src="images/Button Images/greek.jpg" alt="Greek">
+                <figcaption><h3 style = "color: #ba2543">Greek</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/indian.jpg" alt="Indian">
-                <figcaption><h3>Indian</h3></figcaption>
-              </figure>
-              <p>
-               it indian what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('indian')"><figure>
+                <img id = "iwannadie" src="images/Button Images/indian.jpg" alt="Indian">
+                <figcaption><h3 style = "color: #ba2543">Indian</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/mexican.jpg" alt="Mexican">
-                <figcaption><h3>Mexican</h3></figcaption>
-              </figure>
-              <p>
-               it mexican what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('mexican')"><figure>
+                <img id = "iwannadie" src="images/Button Images/mexican.jpg" alt="Mexican">
+                <figcaption><h3 style = "color: #ba2543">Mexican</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/italian.jpg" alt="Italian">
-                <figcaption><h3>Italian</h3></figcaption>
-              </figure>
-              <p>
-               it italian what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('italian')"><figure>
+                <img id = "iwannadie" src="images/Button Images/italian.jpg" alt="Italian">
+                <figcaption><h3 style = "color: #ba2543">Italian</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/japanese.jpg" alt="Japanese">
-                <figcaption><h3>Japanese</h3></figcaption>
-              </figure>
-              <p>
-               it japanese what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('japanese')"><figure>
+                <img id = "iwannadie" src="images/Button Images/japanese.jpg" alt="Japanese">
+                <figcaption><h3 style = "color: #ba2543">Japanese</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/korean.jpg" alt="Korean">
-                <figcaption><h3>Korean</h3></figcaption>
-              </figure>
-              <p>
-               it breakfast what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('korean')"><figure>
+                <img id = "iwannadie" src="images/Button Images/korean.jpg" alt="Korean">
+                <figcaption><h3 style = "color: #ba2543">Korean</h3></figcaption>
+              </figure></a>
             </li>
             <li>
-              <figure>
-                <img src="images/Button Images/vietnamese.jpg" alt="Vietnamese">
-                <figcaption><h3>Vietnamese</h3></figcaption>
-              </figure>
-              <p>
-               it breakfast what more do you want?
-              </p>
-              <a href="#">Visit Website</a>
+              <a href = "#Output" onclick = "getrecepe('viet')"><figure>
+                <img id = "iwannadie" src="images/Button Images/vietnamese.jpg" alt="Vietnamese">
+                <figcaption><h3 style = "color: #ba2543">Vietnamese</h3></figcaption>
+              </figure></a>
+            </li>
+            <li>
+              <a href = "#Output" onclick = "getrecepe('thai')"><figure>
+                <img id = "iwannadie" src="images/Button Images/thai.jpg" alt="Thai">
+                <figcaption><h3 style = "color: #ba2543">Thai</h3></figcaption>
+              </figure></a>
             </li>
           </ul>
         </section>
       </main>
       <footer>
         <p>&copy; 2020. The Recette Team RULES!!!.</p>
-      </footer>   
+      </footer>
           </div>
         </section>
         <!---End Service Section-->
           </div>
-      
+
  <!-- javascript -->
 <script src="final-display.js"></script>
 </body>
